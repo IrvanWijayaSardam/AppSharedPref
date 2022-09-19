@@ -40,11 +40,15 @@ class FragmentLogin : Fragment() {
     }
 
     fun checkData(username : String, password: String){
+        if(binding.edtUsername.text.length == 0 && binding.edtUsername.text.length == 0) {
+            Toast.makeText(context, "Isi Semua Field Yang Tersedia", Toast.LENGTH_SHORT).show()
+        } else {
             if(sharedPrefs.getString("username","") == username && sharedPrefs.getString("password","") == password){
                 gotoHome()
             } else {
                 Toast.makeText(context, "Username / Password Salah", Toast.LENGTH_LONG).show()
             }
+        }
     }
 
     fun gotoHome(){

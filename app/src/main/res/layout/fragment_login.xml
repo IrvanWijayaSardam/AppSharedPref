@@ -15,10 +15,10 @@
 
         <TextView
             android:id="@+id/tvLogin"
-            android:layout_marginTop="100dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
             android:text="Login"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -27,17 +27,22 @@
             android:id="@+id/cvUsername"
             android:layout_centerHorizontal="true"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_below="@+id/tvLogin"
             app:cardCornerRadius="5dp"
             app:cardElevation="10dp"
+            android:layout_marginTop="100dp"
             >
             <EditText
                 android:id="@+id/edtUsername"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_below="@+id/tvLogin"
-                android:hint="Username" />
+                android:gravity="center"
+                android:hint="Username"
+                android:background="@null"
+                android:inputType="text|textNoSuggestions"
+                />
         </androidx.cardview.widget.CardView>
 
 
@@ -45,18 +50,22 @@
             android:id="@+id/cvPassword"
             android:layout_centerHorizontal="true"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_below="@+id/cvUsername"
             app:cardCornerRadius="5dp"
             app:cardElevation="10dp"
+            android:layout_marginTop="20dp"
             >
             <EditText
                 android:id="@+id/edtPasswordLogin"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_below="@+id/cvUsername"
+                android:gravity="center"
                 android:hint="Password"
                 android:inputType="textPassword"
+                android:background="@null"
+
                 />
         </androidx.cardview.widget.CardView>
 
@@ -65,18 +74,18 @@
             android:id="@+id/btnLogin"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/cvPassword"
+            android:layout_above="@+id/viewLine"
             android:layout_centerHorizontal="true"
-            android:text="Login"
+            android:backgroundTint="#AFA4A4"
+            android:text="Login" />
 
-            />
         <View
+            android:id="@+id/viewLine"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#fff"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="50dp"
-            />
+            android:background="#fff" />
 
         <TextView
             android:id="@+id/tvNotyethaveaccaount"
